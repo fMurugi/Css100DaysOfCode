@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge1</title>
+</head>
+<style>
+    body {
+        background-color: white;
+    }
+
+    .one {
+        margin: 40px auto;
+        color: orange;
+        border: 2px solid orange;
+        width: 300px;
+        height: 300px;
+        background-image: linear-gradient(to top right, red, rgb(255, 238, 0));
+    }
+
+    .counter {
+        background-color: white;
+        border: 2px solid white;
+        width: 120px;
+        height: 30px;
+        position: relative;
+        left: 90px;
+        top: 135px;
+        border-radius: 25px;
+        box-shadow: 5px 5px 5px darkred;
+        padding : 5px;
+    }
+
+    .minus {
+        width: 12px;
+        height: 2.5px;
+        position: relative;
+        top: 12px;
+        left: 6px;
+        background-color: black;
+    }
+
+    .circle1, .zero, .circle2{
+        display: inline-block
+    }
+
+    .circle1 {
+        border: 4px solirple;
+        border-radius: 40px;
+        width: 26px;
+        height: 26px;
+        background-color: transparent;
+        position: relative;
+        top: 1px;
+        left: 0%;
+        transition: background-color .40s ease-in-out;
+    }
+
+    .circle1:hover {
+        background-color: salmon;
+    }
+
+    .plus {
+        width: 12px;
+        height: 2.5px;
+        background-color: black;
+        position: relative;
+        top: 12px;
+        left: 7px;
+    }
+
+    .plus2 {
+        width: 12px;
+        height: 2.5px;
+        background-color: black;
+        position: relative;
+        top: 10px;
+        left: 7px;
+        transform: rotate(90deg);
+    }
+
+    .circle2 {
+        width: 26px;
+        height: 26px;
+        background-color: transparent;
+        position: absolute;
+        left: calc(100% - 28px);
+        border-radius: 50%;
+        transition: background-color .35s ease-in-out;
+            }
+
+    .circle2:hover {
+        background-color: salmon;
+            }
+
+    .zero {
+        position: absolute;
+        left: calc(50% - 5px);
+        font-size: 25px;
+    }
+    .circle:hover .minus{
+        background-color: white;
+    }
+    .circle2:hover div{
+        background-color: white;
+    }
+</style>
+
+<script>
+    function load() {
+        const minus = document.getElementById('minus-container');
+        console.log(minus);
+    }
+    window.onload = load;
+
+
+    function substract(){
+        const counterDisplay = document.getElementById('counter-display');
+        const counterValueString = counterDisplay.innerHTML;
+        let counterValueNumber = Number(counterValueString)
+        if(isNaN(counterValueNumber)){
+            counterValueNumber = 0;
+        }
+        const finalNumber = counterValueNumber - 1
+        counterDisplay.innerHTML = finalNumber;
+    }
+
+    function add(){
+        const counterDisplay = document.getElementById('counter-display');
+        const counterValueString = counterDisplay.innerHTML;
+        let counterValueNumber = Number(counterValueString)
+        if(isNaN(counterValueNumber)){
+            counterValueNumber = 0;
+        }
+        const finalNumber = counterValueNumber + 1
+        counterDisplay.innerHTML = finalNumber;
+    }
+    
+    </script>
+
+
+<body>
+    <div class="one">
+        <div class="counter">
+            <div onclick="substract()" class="circle1" id='minus-container'>
+                <div class="minus">
+                </div>
+            </div>
+            <div id="counter-display" class="zero">0</div>
+            <div onclick="add()" class="circle2">
+                <div class="plus"></div>
+                <div class="plus2"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

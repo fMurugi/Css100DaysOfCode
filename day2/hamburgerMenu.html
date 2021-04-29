@@ -19,7 +19,7 @@
 
     }
 
-    
+
     body {
         background-color: white;
     }
@@ -55,27 +55,47 @@
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
     }*/
-    .hm-bar{
+    .hm-bar {
         background-color: white;
-        width:70px;
-        height:8px;
+        width: 70px;
+        height: 8px;
         border-radius: 25px;
-        margin-bottom:10px ;
+        margin-bottom: 10px;
 
     }
-    .green{
+
+    .green {
         display: flex;
         justify-content: center;
-        align-items: center;       
-   }
+        align-items: center;
+    }
+
+    .green:hover .hm-bar1 {
+        transform: translateY(18px) rotate(45deg);
+        transition: 1s ease-in-out;
+
+    }
+
+    .green:hover .hm-bar3 {
+        transform: translateY(-18px) rotate(-45deg);
+        transition-duration: 1s;
+    }
+
+    .green:hover .hm-bar2 {
+        transform: scale(0, 0);
+        transition: 1s;
+
+
+
+    }
 </style>
 
 <body>
     <div class="green clicked">
         <div class="hm-container">
             <div class="hm-bar hm-bar1"></div>
-            <div class="hm-bar hm-bar2" ></div>
-            <div class="hm-bar hm-bar3" ></div>
+            <div class="hm-bar hm-bar2"></div>
+            <div class="hm-bar hm-bar3"></div>
         </div>
     </div>
 </body>

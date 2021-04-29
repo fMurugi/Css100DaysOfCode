@@ -14,43 +14,17 @@
         background-color: yellowgreen;
         margin: 100px auto;
         border: 2px solid black;
-        
-
-
-    }
-    .white{
-        width: 60px;
-        height:5px;
-        background-color:white;
-        border-radius: 25px;
-        position:absolute;
-        top:px;
-        left:px;
-
 
 
 
     }
-    #white2{
-        position: absolute;
-        top:px;
-        animation-name: first;
-        animation-duration: 2s;
-    }
-    #white3{
-        position: absolute;
-        top:px;
-        left:px;
-        animation-name: second;
-        animation-duration: 2s;
-    }
+
     
-
-
     body {
         background-color: white;
     }
-   /*@keyframes example{
+
+    /*@keyframes example{
        from {top:158px;transform:rotate(deg);}
        to {top:150px;transform: rotate(deg);}
 
@@ -81,16 +55,28 @@
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
     }*/
+    .hm-bar{
+        background-color: white;
+        width:70px;
+        height:8px;
+        border-radius: 25px;
+        margin-bottom:10px ;
 
-
+    }
+    .green{
+        display: flex;
+        justify-content: center;
+        align-items: center;       
+   }
 </style>
 
 <body>
     <div class="green clicked">
-        <div class="white"></div>
-        <div class="white" id="white2"></div>
-        <div class="white" id="white3"></div>
-        <div class="rotate"></div>
+        <div class="hm-container">
+            <div class="hm-bar hm-bar1"></div>
+            <div class="hm-bar hm-bar2" ></div>
+            <div class="hm-bar hm-bar3" ></div>
+        </div>
     </div>
 </body>
 
